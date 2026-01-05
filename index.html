@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dagoba Visualizer</title>
+    <style>
+        body { font-family: sans-serif; }
+        canvas { border: 1px solid #ccc; background: #f9f9f9; display: block; margin: 20px auto; cursor: crosshair; }
+        .controls { text-align: center; padding: 20px; background: #eee; }
+        input { padding: 8px; width: 200px; border-radius: 4px; border: 1px solid #ccc; }
+        button { padding: 8px 15px; border-radius: 4px; border: none; background: #4444ff; color: white; cursor: pointer; margin: 0 5px; }
+        button:hover { background: #3333cc; }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <h1>Dagoba Graph Visualizer</h1>
+        <input type="text" id="searchInput" placeholder="Search for a name (e.g. Alice)...">
+        <button onclick="searchNode()">Search & Center</button>
+        <button onclick="visualize()">Manual Refresh</button>
+    </div>
+    
+    <canvas id="graphCanvas" width="800" height="500"></canvas>
+
+    <script src="database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
